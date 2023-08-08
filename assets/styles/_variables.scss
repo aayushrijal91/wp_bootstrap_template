@@ -1,0 +1,164 @@
+$primary: #D80000;
+$secondary: #00ADEE;
+$tertiary: #202020;
+$dark: #232323;
+$dark-grey: #3C4A5A;
+$light-grey: #f4f4f4;
+$jet-black: #171717;
+$grey: #747474;
+$light: #D9D9D9;
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+    (
+        "primary": $primary,
+        "secondary": $secondary,
+        "tertiary": $tertiary,
+        "dark": $dark,
+        "light-grey": $light-grey,
+        "dark-grey": $dark-grey,
+        "jet-black": $jet-black,
+        "grey": $grey,
+        "light": $light,
+    ),
+    $theme-colors
+);
+
+// Grid Breakpoints
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1440px,
+    xxl: 1748px,
+) !default;
+
+// Container sizing
+$container-max-widths: (
+    sm: 540px,
+    md: 740px,
+    lg: 1280px,
+    xl: 1442px,
+    xxl: 1685px,
+) !default;
+
+$spacer: 1rem !default;
+$spacers: (
+    ) !default;
+$spacers: map-merge((0: 0,
+            1: $spacer * 0.25,
+            2: $spacer * 0.5,
+            3: $spacer,
+            4: $spacer * 1.5,
+            5: $spacer * 3,
+            6: $spacer * 4,
+            7: $spacer * 5,
+            8: $spacer * 6,
+            9: $spacer * 7,
+            10: $spacer * 10,
+            11: $spacer * 11,
+            12: $spacer * 12,
+            13: $spacer * 13,
+            14: $spacer * 14,
+            15: $spacer * 15,
+            16: $spacer * 16,
+            17: $spacer * 17,
+            18: $spacer * 18,
+            19: $spacer * 19,
+            20: $spacer * 20,
+            23: $spacer * 23,
+            25: $spacer * 25,
+        ),
+        $spacers
+);
+
+$font-sizes: (
+    90: 90px,
+    80: 80px,
+    70: 70px,
+    64: 64px,
+    48: 48px,
+    30: 30px,
+    24: 24px,
+    22: 22px,
+    20: 20px,
+    18: 18px,
+    14: 14px,
+    12: 12px
+);
+
+$border-radius: .25rem !default;
+$border-radius-pill: 50rem !default;
+
+$utilities: (
+    ) !default;
+$utilities: map-merge(("line-height":(property: line-height,
+                class: lh,
+                responsive: true,
+                values: (1:1,
+                    2:2,
+                    "0_9":0.9,
+                    "1_5": 1.5,
+                    "1_67": 1.67,
+                    "1_87" : 1.87)),
+            "rounded": (property: border-radius,
+                class: rounded,
+                responsive: true,
+                values: (null: $border-radius,
+                    0:0,
+                    1:1px,
+                    2:2px,
+                    3:3px,
+                    4:4px,
+                    5:5px,
+                    6:6px,
+                    7:7px,
+                    8:8px,
+                    9:9px,
+                    10:10px,
+                    20:20px,
+                    circle: 50%,
+                    pill: $border-radius-pill )),
+            "opacity": (property: opacity,
+                values: (0: 0,
+                    25: .25,
+                    50: .5,
+                    70: .70,
+                    100: 1,
+                )),
+            "font-weight": (property: font-weight,
+                class: fw,
+                responsive: true,
+                values: (100:100,
+                    200:200,
+                    300:300,
+                    400:400,
+                    500:500,
+                    600:600,
+                    700:700,
+                    800:800,
+                    900:900)),
+            "order": (property: order,
+                class: order,
+                responsive: true,
+                values: (1:1,
+                    2:2,
+                    3:3,
+                    4:4,
+                    5:5,
+                    6:6,
+                    7:7,
+                    8:8,
+                    9:9,
+                    10:10,
+                    11:11,
+                    12:12)),
+            "letter-spacing": (property: letter-spacing,
+                class: ls,
+                values: (1: 0.01em,
+                    2: -0.02em,
+                    3: -0.03em))), $utilities
+);
+
+$enable-negative-margins: true;
